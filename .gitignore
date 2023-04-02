@@ -1,0 +1,4 @@
+.env
+
+# CLIENT
+client/node_modules

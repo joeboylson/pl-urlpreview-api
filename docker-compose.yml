@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+  # SERVER
+  server:
+    container_name: plurlpreviewapi-server
+    build:
+      context: ./server
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./server:/server
+    ports:
+      - "8000:8000"
+    env_file:
+      .env
+
+volumes:
+  elasticsearch-data:
+    driver: local
